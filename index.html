@@ -1,0 +1,192 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 25px 0;
+        }
+        section{
+            width: 1140px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+         
+        }
+        .comment-tittle{
+            margin-bottom: 25px;
+        }
+        .comment-tittle h1{
+            font-size: 55px;
+        }
+        .comment-item p{
+            padding: 10px;
+            font-size: 18px;
+            background-color: tomato;
+            color: white;
+        }
+        textarea{
+            width: 100%;
+            padding: 25px;
+            font-size: 18px;
+        }
+        button{
+            padding: 10px 35px;
+            font-size: 18px;
+            background-color: tomato;
+            color: white;
+            border-radius: 25px;
+            border: 1px solid black;
+            transition: all .3s linear;
+            margin-top: 25px;
+        }
+        button:hover{
+            background-color: black;
+           
+        }
+    </style> -->
+</head>
+<body>
+
+    <!-- <section>
+        <div class="container">
+            <div class="comment-tittle">
+                <h1>Recent user comments</h3>
+            </div>
+            
+            <div class="comment-item" id="comment-item">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit aliquid explicabo, dolor ipsam reiciendis! Facere fugit quis tempore hic!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione impedit aliquid explicabo, dolor ipsam reiciendis! Facere fugit quis tempore hic!</p>
+            </div>
+           
+            <div class="comment-box">
+                <textarea rows="10" name="" id="comment-text" placeholder="Type your commet here"></textarea>
+                <button type="submit" id="btn-post">Post</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        let button = document.querySelector("#btn-post");
+        button.addEventListener("click", myfun)
+         document.querySelector("#comment-text").addEventListener("keyUp", myfun)
+        
+        function myfun() {
+             postValue = document.querySelector("#comment-text").value;
+            if (postValue === "") {
+                return false;
+            }
+            let p = document.createElement("p");
+            p.innerText= postValue;
+            let parentId= document.querySelector("#comment-item");
+            parentId.appendChild(p);
+            document.querySelector("#comment-text").value= ""
+        }
+    </script> -->
+    <script src="js.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+    <header class="my-5">
+        <h1 class="text-white text-center mt-16">
+          Welcome to
+          <span class="text-green-400 font-medium  ">Baap-Er-Bank!!!</span>
+        </h1> 
+    </header>
+    <main class="w-50 m-auto">
+    <section id="sign-up">
+        <h2 class="text-center mb-5  text-white">Please Create a New Account Here</h2>
+        <div class="form bg-primary p-5 rounded-lg">
+            <input  class="d-block w-100 py-2 px-5 mb-4 " type="text" name="" id="name-user" placeholder="Enter your Name" />
+            <input  class="d-block w-100 py-2 px-5 mb-4 "type="text" name="" id="name-user" placeholder="Enter your Father Name" />
+            <input  class="d-block w-100 py-2 px-5 mb-4 "type="email" name="" id="email-user" placeholder="Enter your Email" />
+            <input  class="d-block w-100 py-2 px-5 mb-4 "type="password" name="" id="pass-user" placeholder="Enter your Password" />
+            <button class="btn btn-info font-weight-bold" id="start-btn">Create</button>
+        </div>
+    </section>
+    <div id="login">
+        
+        
+            <h1 class="text-center mb-5 text-white">Please Login</h1>
+            <section class="mx-auto bg-info rounded p-5">
+                <input class="d-block w-100 p-3 mb-5" type="email" name="" id="email" placeholder="Your Email..." />
+                <input class="d-block w-100 p-3" type="password" id="pass" placeholder="Your Password..." />
+                <button id="submit" class="btn btn-outline-light mt-3 py-2 font-weight-bold px-4"> Submit </button>
+            </section>
+        
+    </div>
+    
+</main>
+<section id="bank" class="mt-5">
+    <div class="container">
+        <h1 class="text-center text-white mb-5">Let's get some Money</h1>
+        <div class="row row-cols-3 g-5 text-center">
+            <div class="col">
+                <div class=" bg-info text-white py-5 ps-2 rounded">
+                    <h3>Deposit</h3>
+                    <h3>$<span id="deposit">00</span></h3> </div>
+            </div>
+            <div class="col">
+                <div class="bg-primary text-white py-5 rounded">
+                    <h3>Withdraw</h3>
+                    <h3>$<span id="withdraw">00</span></h3> </div>
+            </div>
+            <div class="col">
+                <div class="bg-success  text-white py-5 rounded">
+                    <h3>Balance</h3>
+                    <h3>$<span id="balence">100</span></h3> </div>
+            </div>
+        </div>
+        <row class="row mt-4 row-cols-2">
+            <div class="col">
+                <div class="bg-info text-white p-5 rounded">
+                    <label class="title" for="deposit-input">Please Deposit</label>
+                    <input id="deposit-input" class="d-block w-100  px-4 py-2" type="text" placeholder="$ amound you want deposit" />
+                    <button id="submit-deposit" class="btn btn-outline-light mt-3 py-2 font-weight-bold px-4"> Submit </button>
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-info text-white p-5 rounded">
+                    <label class="title" for="withdraw-input">Please withdraw</label>
+                    <input class="d-block w-100 px-4 py-2" type="text" placeholder="$ amound you want deposit" id="withdraw-input" />
+                    <button id="submit-withdraw" class="btn btn-outline-light mt-3 py-2 font-weight-bold px-4"> Submit </button>
+                </div>
+            </div>
+        </row>
+    </div>
+</section>
+    <script src="js.js">
+   
+    </script>
+  </body>
+</html>
